@@ -15,7 +15,7 @@ app.use('/users', userRoutes)
 require('./connection')
 
 const server = require('http').createServer(app);
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 4000;
 const io = require('socket.io')(server, {
   cors: {
     origin: process.env.FRONTEND,
